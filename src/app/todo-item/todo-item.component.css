@@ -1,0 +1,23 @@
+.todo--done {
+  text-decoration: line-through;
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+
+.deletion {
+  margin-left: auto;
+  border-radius: 50%;
+}
+
+.deletion:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+}

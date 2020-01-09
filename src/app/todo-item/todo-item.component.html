@@ -1,0 +1,21 @@
+<div class="todo-item">
+  <label appHoverHighlight>
+    <input
+      type="checkbox"
+      [value]="todo.title"
+      [checked]="todo.done"
+      (click)="onItemClicked()"
+    />
+    <span [ngClass]="{ 'todo--done': todo.done }"
+      >{{ title }} - {{ done | doneStatus }}</span
+    >
+  </label>
+  <mat-icon
+    aria-hidden="false"
+    aria-label="Delete"
+    round
+    class="deletion"
+    (click)="onTrashCanClicked()"
+    >delete</mat-icon
+  >
+</div>

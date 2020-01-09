@@ -1,0 +1,23 @@
+/* Add application styles & imports to this file! */
+@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Merriweather", serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+span {
+  margin-left: 0.5rem;
+}

@@ -1,0 +1,40 @@
+<div class="app">
+  <hello name="{{ name }}"></hello>
+  <div class="setting">
+    <label class="setting-option"
+      ><input
+        type="checkbox"
+        value="Done"
+        [(ngModel)]="filterDoneOnly"
+      /><span> Show Completed Todo</span>
+    </label>
+  </div>
+  <div class="setting">
+    <label class="setting-option"
+      ><input type="checkbox" value="Done" [(ngModel)]="showSummary" /><span>
+        Show Summary</span
+      >
+    </label>
+    <div *ngIf="showSummary">
+      {{ (todos | filters: true).length }} Completed
+    </div>
+  </div>
+  <ul class="todo-list">
+    <li *ngFor="let item of todos | filters: filterDoneOnly; let i = index">
+      <app-todo-item
+        [title]="item.title"
+        [done]="item.done"
+        [todo]="item"
+        (onCheck)="onItemChecked(item)"
+        (onDelete)="removeTodo(item)"
+      >
+      </app-todo-item>
+    </li>
+  </ul>
+  <form [formGroup]="todoForm" (ngSubmit)="addTodo()">
+    <label>
+      New todo:
+      <input type="text" formControlName="title" />
+    </label>
+  </form>
+</div>

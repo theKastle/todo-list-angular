@@ -1,0 +1,29 @@
+p {
+  font-family: Lato;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.setting-option {
+  display: flex;
+  align-items: center;
+}
+
+.setting-option span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+}
+
+.app {
+  max-width: 600px;
+}
